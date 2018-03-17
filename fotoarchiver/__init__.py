@@ -11,6 +11,7 @@
 
 """
 
+from abc import ABCMeta, abstractmethod
 
 
 def singleton(cls):
@@ -52,21 +53,34 @@ class Config(object):
             del self.__params[key]
 
 
-
+@singleton
 class Initializer(object):
-    """
-    проверка свободного места
-    import os
-    st = os.statvfs("/home")
-    du = st.f_bsize * st.f_bavail
-    print(du)
-    du = st.f_bsize * st.f_bavail / 1024 / 1024 # в мб
-    """
+
+    __slots__ = ('__init_moduls',)
 
 
     def __init__(self):
+        self.__init_moduls = {}
 
 
+
+class TaskExecuterTemplate(metaclass=ABCMeta):
+
+    @abstractmethod
+    def execute(self):
+        pass
+        #
+
+
+
+
+@singleton
+class Observer(object):
+
+    __slots__ = ('__execute_moduls',)
+
+    def __init__(self):
+        self.__execute_moduls = {}
 
 
 
