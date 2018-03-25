@@ -24,6 +24,7 @@ def singleton(cls):
 
     return get_instance
 
+
 @singleton
 class Config(object):
     __slots__ = ('__params',)

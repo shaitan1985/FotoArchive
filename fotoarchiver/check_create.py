@@ -3,6 +3,9 @@
 1. записать файл настроек
 """
 import json
+import os
+import os.path as Path
+
 
 path = 'common/default.json'
 settings = {}
@@ -31,4 +34,11 @@ with open(path, 'w') as f:
     json.dump(settings, f, indent=4)
 
 with open(path) as f:
-    print(json.load(f))
+    tree = json.load(f)
+
+paths = tree['paths']
+types = tree['types']
+exts_photo = tree['exts_photo']
+exts_video = tree['exts_video']
+
+os.mkdir(paths['video'], mode=0o777, *, dir_fd=None)

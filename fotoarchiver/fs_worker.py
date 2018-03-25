@@ -30,6 +30,12 @@ def get_hash_md5(filename):
         return m.hexdigest()
 
 
-if __name__ == '__main__':
+def get_all_exts(path):
 
+
+
+
+
+
+if __name__ == '__main__':
     print(get_hash_md5('logger.py'))
