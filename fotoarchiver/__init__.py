@@ -12,6 +12,11 @@
 """
 
 from abc import ABCMeta, abstractmethod
+import json
+import os.path as Path
+
+
+from fotoarchiver.logger import log_debug as logger
 
 
 def singleton(cls):
@@ -31,6 +36,7 @@ class Config(object):
 
     def __init__(self, ):
         self.__params = {}
+        self.__init_paths()
 
     def __iter__(self):
         return iter(self.__params.items())
@@ -53,6 +59,22 @@ class Config(object):
         except AttributeError:
             del self.__params[key]
 
+    def __init_paths(self):
+        path = 'common/user.json'
+
+        if not Path.exists(path):
+            path = 'common/default.json'
+        with open(path) as f:
+            tree = json.load(f)
+        self.__setattr__('type_paths', tree)
+
+
+
+
+
+
+
+
 
 @singleton
 class Initializer(object):
@@ -62,6 +84,9 @@ class Initializer(object):
 
     def __init__(self):
         self.__init_moduls = {}
+
+
+
 
 
 
@@ -106,12 +131,17 @@ def main():
 
     """
 
+    config = Config()
 
+    logger(config.type_paths)
 
-    Observer()
+    # Observer()
+    #
+    #
+    # initilizer = Initializer()
 
-
-    initilizer = Initializer()
+if __name__ == '__main__':
+    main()
 
 
 

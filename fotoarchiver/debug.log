@@ -1,1 +1,1 @@
-[DEBUG] 2018-03-25 15:49:25 [logger.py_Line:36] ({'raw-image': 'storage/photo/raw-image', 'raster-image': 'storage/photo/raster-image', 'preview': 'storage/photo/preview', 'video': 'storage/video'},)
+[DEBUG] 2018-03-26 11:26:31 [logger.py_Line:36] ({'preview': 'storage/photo/preview', 'raw-image': 'storage/photo/raw-image', 'raster-image': 'storage/photo/raster-image', 'video': 'storage/video', 'import': 'import'},)

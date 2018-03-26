@@ -5,7 +5,7 @@
 import json
 import os.path as Path
 
-from fotoarchiver import logger
+from fotoarchiver.logger import log_debug as logger
 
 
 
@@ -24,6 +24,8 @@ def read_paths():
         type_paths['video'] = Path.join('storage', 'video')
 
         type_paths['preview'] = Path.join('storage', 'photo', 'preview')
+        type_paths['import'] = Path.join('import')
+
 
 
 
@@ -41,6 +43,6 @@ if __name__ == '__main__':
     with open('common/default.json', 'w') as f:
         pass
 
-    logger.log_debug(read_paths())
+    logger(read_paths())
 
 # os.mkdir(paths['video'], mode=0o777, *, dir_fd=None)
