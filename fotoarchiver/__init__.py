@@ -17,7 +17,7 @@ import os.path as Path
 
 
 from fotoarchiver.logger import log_debug as logger
-
+from fotoarchiver.fs_worker import FSWorker
 
 def singleton(cls):
     instances = {}
@@ -36,7 +36,7 @@ class Config(object):
 
     def __init__(self, ):
         self.__params = {}
-        self.__init_paths()
+        self.__load_static()
 
     def __iter__(self):
         return iter(self.__params.items())
@@ -59,32 +59,30 @@ class Config(object):
         except AttributeError:
             del self.__params[key]
 
-    def __init_paths(self):
-        path = 'common/user.json'
+    def __load_static(self):
+        path = Path.join(Path.dirname(__file__), '/common/user.json')
 
         if not Path.exists(path):
-            path = 'common/default.json'
+            path = Path.join(Path.dirname(__file__), 'common/default.json')
         with open(path) as f:
             tree = json.load(f)
         self.__setattr__('type_paths', tree)
 
 
 
-
-
-
-
-
-
 @singleton
 class Initializer(object):
 
-    __slots__ = ('__init_moduls',)
+    __slots__ = ('__moduls',)
 
 
     def __init__(self):
-        self.__init_moduls = {}
+        self.__moduls = {}
+        Config()
+        self.__check_exists()
 
+    def __check_exists(self):
+        FSWorker.check_create(Config().type_paths.get('import'), False)
 
 
 
@@ -95,18 +93,27 @@ class TaskExecuterTemplate(metaclass=ABCMeta):
     @abstractmethod
     def execute(self):
         pass
-        #
 
 
 
-
-@singleton
-class Observer(object):
-
-    __slots__ = ('__execute_moduls',)
+class UpdateChecker(TaskExecuterTemplate):
 
     def __init__(self):
-        self.__execute_moduls = {}
+        self.__import_path = Config().type_paths.get('import')
+
+    def execute(self):
+        if self.__got_work():
+            # послать сообщеине
+
+
+    def __got_work(self):
+        if FSWorker.get_all_types():
+            return True
+
+
+
+
+
 
 
 
@@ -135,10 +142,10 @@ def main():
 
     logger(config.type_paths)
 
-    # Observer()
-    #
-    #
-    # initilizer = Initializer()
+    Initializer()
+
+
+
 
 if __name__ == '__main__':
     main()

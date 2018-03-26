@@ -9,6 +9,7 @@
 """
 import os
 import hashlib
+from abc import ABCMeta
 
 
 import fleep
@@ -17,9 +18,10 @@ import fleep
 from fotoarchiver.logger import log_debug as logger
 
 
-class FSWorker(object):
+class FSWorker(metaclass=ABCMeta):
 
-    def check_free_space(path):
+    @classmethod
+    def check_free_space(cls, path):
         #проверка свободного места
         st = os.statvfs(path)
         du = st.f_bsize * st.f_bavail
@@ -28,9 +30,13 @@ class FSWorker(object):
         print(du)
 
 
+    @classmethod
+    def log(cls, *args):
+        logger(*args)
 
-    def get_hash_md5(filename):
-        with open(filename, 'rb') as f:
+    @classmethod
+    def get_hash_md5(cls, file):
+        with open(file, 'rb') as f:
             m = hashlib.md5()
             while True:
                 data = f.read(8192) # размер блока чтения 8 мб
@@ -39,22 +45,43 @@ class FSWorker(object):
                 m.update(data)
             return m.hexdigest()
 
+    @classmethod
+    def get_type(cls, path):
 
-    def get_type(file):
-        info = fleep.get(file.read(128))
+        with open(path, "rb") as file:
+            info = fleep.get(file.read(128))
 
-        logger(info.type)
+        if len(info.type):
+            cls.log(info.type[0], cls.get_hash_md5(path))
+            return info.type[0]
+        return None
 
-        return info.type
-
-
-    def get_all_types(path):
-        types = {}
+    @classmethod
+    def get_all_types(cls, path):
+        types = []
         for d, dir, files in os.walk(path):
             for f in files:
-                with open(os.path.join(d, f), "rb") as file:
-                    f_type = get_type(file)
+                tmp_t = cls.get_type(os.path.join(d, f))
+                if tmp_t is not None:
+                    types.append(tmp_t)
 
+        cls.log(types)
+        uniq_t = set(types)
+        cls.log(uniq_t)
+        return uniq_t
+
+
+    @classmethod
+    def check_create(cls, path, file=True):
+        if file:
+            if not os.path.exists(path):
+                return False
+        else:
+            try:
+                os.mkdir(path)
+            except OSError:
+                pass
+        return True
 
 
 
@@ -63,4 +90,4 @@ class FSWorker(object):
 
 if __name__ == '__main__':
     # logger(check_act_exts(check_create.read_paths(), '/media/huge/foto'))
-    get_all_types('.')
+    FSWorker.get_all_types('.')
