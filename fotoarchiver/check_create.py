@@ -3,42 +3,44 @@
 1. записать файл настроек
 """
 import json
-import os
 import os.path as Path
 
-
-path = 'common/default.json'
-settings = {}
-paths = {}
-types = {}
-types['photo'] = 'photo'
-types['video'] = 'video'
-exts_photo = {}
-exts_photo['jpg'] = 'jpg'
-exts_photo['raw'] = 'cr2'
-exts_photo['prew'] = 'prew'
-exts_video = {}
-exts_video['mpeg4'] = 'mpg4'
-exts_video['mov'] = 'mov'
-exts_video['avi'] = 'avi'
+from fotoarchiver import logger
 
 
-paths['input'] = 'hole'
-paths['output'] = 'storage'
-settings['paths'] = paths
-settings['types'] = types
-settings['exts_photo'] = exts_photo
-settings['exts_video'] = exts_video
 
-with open(path, 'w') as f:
-    json.dump(settings, f, indent=4)
 
-with open(path) as f:
-    tree = json.load(f)
 
-paths = tree['paths']
-types = tree['types']
-exts_photo = tree['exts_photo']
-exts_video = tree['exts_video']
+def read_paths():
+    path = 'common/user.json'
 
-os.mkdir(paths['video'], mode=0o777, *, dir_fd=None)
+    if not Path.exists(path):
+
+        path = 'common/default.json'
+        type_paths = {}
+
+        type_paths['raster-image'] = Path.join('storage', 'photo', 'raster-image')
+        type_paths['raw-image'] = Path.join('storage', 'photo', 'raw-image')
+        type_paths['video'] = Path.join('storage', 'video')
+
+        type_paths['preview'] = Path.join('storage', 'photo', 'preview')
+
+
+
+
+        with open(path, 'w') as f:
+            json.dump(type_paths, f, indent=4)
+
+    with open(path) as f:
+        tree = json.load(f)
+
+    return tree
+
+
+if __name__ == '__main__':
+    with open('common/default.json', 'w') as f:
+        pass
+
+    logger.log_debug(read_paths())
+
+# os.mkdir(paths['video'], mode=0o777, *, dir_fd=None)

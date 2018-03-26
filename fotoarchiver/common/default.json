@@ -1,20 +1,6 @@
 {
-    "types": {
-        "video": "video",
-        "photo": "photo"
-    },
-    "exts_video": {
-        "mpeg4": "mpg4",
-        "mov": "mov",
-        "avi": "avi"
-    },
-    "exts_photo": {
-        "jpg": "jpg",
-        "raw": "cr2",
-        "prew": "prew"
-    },
-    "paths": {
-        "input": "hole",
-        "output": "storage"
-    }
+    "raw-image": "storage/photo/raw-image",
+    "raster-image": "storage/photo/raster-image",
+    "preview": "storage/photo/preview",
+    "video": "storage/video"
 }
