@@ -28,42 +28,37 @@ def singleton(cls):
 
     return get_instance
 
-class AdvanceObject(object):
-    __slots__ = ('__attrs',)
 
-    def __init__(self, ):
-        self.__attrs = {}
+@singleton
+class Config(object):
+    __slots__ = ('__params',)
+
+    def __init__(self):
+        self.__params = {}
+        self.load_static()
 
     def __iter__(self):
-        return iter(sorted(self.__attrs.items()))
+        return iter(self.__params.items())
 
     def __getattribute__(self, key):
         try:
             return super().__getattribute__(key)
         except AttributeError:
-            return self.__attrs.get(key)
+            return self.__params.get(key)
 
     def __setattr__(self, key, value):
         try:
             super().__setattr__(key, value)
         except AttributeError:
-            self.__attrs[key] = value
+            self.__params[key] = value
 
     def __delattr__(self, key):
         try:
             super().__delattr__(key)
         except AttributeError:
-            del self.__attrs[key]
+            del self.__params[key]
 
-
-@singleton
-class Config(AdvanceObject):
-
-    def __init__(self, ):
-        super().__init__()
-        self.__load_static()
-
-    def __load_static(self):
+    def load_static(self):
         path = Path.join(Path.dirname(__file__), '/common/user.json')
 
         if not Path.exists(path):
@@ -71,6 +66,54 @@ class Config(AdvanceObject):
         with open(path) as f:
             tree = json.load(f)
         self.__setattr__('type_paths', tree)
+
+
+@singleton
+class Initializer(object):
+    __slots__ = ('__params',)
+
+    def __init__(self):
+        self.__params = {}
+        Config()
+        self.__fill_moduls()
+
+    def __iter__(self):
+        return iter(self.__params.items())
+
+    def __getattribute__(self, key):
+        try:
+            return super().__getattribute__(key)
+        except AttributeError:
+            return self.__params.get(key)
+
+    def __setattr__(self, key, value):
+        try:
+            super().__setattr__(key, value)
+        except AttributeError:
+            self.__params[key] = value
+
+    def __delattr__(self, key):
+        try:
+            super().__delattr__(key)
+        except AttributeError:
+            del self.__params[key]
+
+    def __check_exists(self):
+        FSWorker.check_create(Config().type_paths.get('import'), False)
+
+    def __fill_moduls(self):
+        """ ключ, это порядок выполнения"""
+        self.__setattr__('q20', FolderUpdateChecker())
+
+    def start_works(self):
+        FSWorker.log('start_works')
+        for key, ex in self:
+
+            FSWorker.log(key, ex)
+
+            ex.execute()
+        FSWorker.log('ended works')
+
 
 
 class TaskExecuterTemplate(metaclass=ABCMeta):
@@ -83,38 +126,13 @@ class TaskExecuterTemplate(metaclass=ABCMeta):
         pass
 
 
-@singleton
-class Initializer(AdvanceObject):
-
-    def __init__(self):
-        super().__init__()
-        Config()
-        self.__check_exists()
-
-    def __check_exists(self):
-        FSWorker.check_create(Config().type_paths.get('import'), False)
-
-    def __fill_moduls(self):
-        """ ключ, это порядок выполнения"""
-        self.__setattr__(20, FolderUpdateChecker)
-
-    def start_works(self):
-        FSWorker.log('started')
-        FSWorker.log(self)
-        for i in self:
-
-
-            i.execute()
-
-
-
 
 class FolderUpdateChecker(TaskExecuterTemplate):
     """ проверка наличия файлов для обработки"""
     def __init__(self):
         super().__init__()
         FSWorker.log('123')
-
+        FSWorker.log(Config().type_paths.get('import'))
         self.__import_path = Config().type_paths.get('import')
 
     def execute(self):
@@ -159,14 +177,24 @@ def main():
     """
 
     config = Config()
+    FSWorker.log('config3', config.__dict__)
 
-    FSWorker.log(config.type_paths)
+
+
 
 
     main_init = Initializer()
     """ здесь можно добавлять обработчики"""
+    # main_init.q20 = FolderUpdateChecker()
+    FSWorker.log('Initializer2', main_init.__dict__)
+
+    for item in main_init:
+        FSWorker.log((item))
+
 
     main_init.start_works()
+
+    FSWorker.log('config4', main_init.__dict__)
 
 
 

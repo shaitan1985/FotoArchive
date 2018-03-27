@@ -16,9 +16,6 @@ from abc import ABCMeta
 import fleep
 
 
-from ata.logger import log_debug as logger
-
-
 class FSWorker(metaclass=ABCMeta):
 
     @classmethod
