@@ -5,7 +5,7 @@
 import json
 import os.path as Path
 
-from fotoarchiver.logger import log_debug as logger
+from ata.fs_worker import FSWorker
 
 
 
@@ -43,6 +43,6 @@ if __name__ == '__main__':
     with open('common/default.json', 'w') as f:
         pass
 
-    logger(read_paths())
+    FSWorker.log(read_paths())
 
 # os.mkdir(paths['video'], mode=0o777, *, dir_fd=None)

@@ -9,13 +9,14 @@
 """
 import os
 import hashlib
+import logging
 from abc import ABCMeta
 
 
 import fleep
 
 
-from fotoarchiver.logger import log_debug as logger
+from ata.logger import log_debug as logger
 
 
 class FSWorker(metaclass=ABCMeta):
@@ -32,7 +33,19 @@ class FSWorker(metaclass=ABCMeta):
 
     @classmethod
     def log(cls, *args):
-        logger(*args)
+        log_path = os.path.join(os.path.dirname(__file__), 'debug.log')
+        formatt = '[%(levelname)s] %(asctime).19s [%(filename)s_Line:%(lineno)d] %(message)s'
+
+        logging.basicConfig(
+            level=logging.DEBUG,
+            format=formatt,
+            filename=log_path,
+            filemode='w'
+        )
+
+        logger = logging.getLogger()
+
+        logger.debug(args)
 
     @classmethod
     def get_hash_md5(cls, file):
@@ -52,7 +65,6 @@ class FSWorker(metaclass=ABCMeta):
             info = fleep.get(file.read(128))
 
         if len(info.type):
-            cls.log(info.type[0], cls.get_hash_md5(path))
             return info.type[0]
         return None
 
@@ -65,9 +77,7 @@ class FSWorker(metaclass=ABCMeta):
                 if tmp_t is not None:
                     types.append(tmp_t)
 
-        cls.log(types)
         uniq_t = set(types)
-        cls.log(uniq_t)
         return uniq_t
 
 

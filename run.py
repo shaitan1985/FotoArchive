@@ -1,3 +1,3 @@
-from fotoarchiver import main
+from ata import main
 
 main()
