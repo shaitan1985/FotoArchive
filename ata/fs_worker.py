@@ -1,10 +1,10 @@
 """
     модуль работы с файловой системой.
     - проверка свободного места
-    - наличие фалов/папок
-    - перемещение айлов/папок
+    - наличие файлов/папок
+    - перемещение файлов/папок
     - чтение/запись конфигов
-    - получение хэша файла
+    - получение хэшей файла
 
 """
 import os
@@ -73,14 +73,23 @@ class FSWorker(metaclass=ABCMeta):
 
     @classmethod
     def get_born_date(cls, path, type):
+        date = None
         if type == 'raster-image':
             date = cls.__date_from_exif(path)
         elif type == 'video':
-            date = cls.__dt
+            date = cls.__date_from_videometa(path)
+        elif type == 'raw-image':
+            date = cls.__date_from_raw(path)
+        if date is None:
+            date = __get_date_from_file(path)
+
+        return date
+
 
     @classmethod
     def __date_from_videometa(cls, path):
-
+        """достать дату из видео"""
+        return None
 
 
     @classmethod

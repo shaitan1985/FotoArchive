@@ -3,7 +3,7 @@ import os
 
 import exifread
 import enzyme
-
+import hachoir
 
 
 # path_name = "picture2.jpg"
