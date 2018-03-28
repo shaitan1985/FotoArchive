@@ -10,13 +10,19 @@
 import os
 import hashlib
 import logging
-from abc import ABCMeta
+import datetime
+from abc import ABCMeta, abstractmethod
 
 
 import fleep
-
+import exifread
+import enzyme
 
 class FSWorker(metaclass=ABCMeta):
+
+    @abstractmethod
+    def __never_born(self):
+        pass
 
     @classmethod
     def check_free_space(cls, path):
@@ -66,6 +72,37 @@ class FSWorker(metaclass=ABCMeta):
         return None
 
     @classmethod
+    def get_born_date(cls, path, type):
+        if type == 'raster-image':
+            date = cls.__date_from_exif(path)
+        elif type == 'video':
+            date = cls.__dt
+
+    @classmethod
+    def __date_from_videometa(cls, path):
+
+
+
+    @classmethod
+    def __date_from_exif(cls, path):
+
+        with open(path, 'rb') as f:
+
+            tags = exifread.process_file(f)
+
+        value = str(tags.get('EXIF DateTimeOriginal'))
+        print(value)
+
+        try:
+            date = datetime.datetime.strptime(value, "%Y:%m:%d %H:%M:%S")
+        except ValueError:
+            return None
+        return date
+
+
+
+
+    @classmethod
     def get_all_types(cls, path):
         types = []
         for d, dir, files in os.walk(path):
@@ -75,8 +112,19 @@ class FSWorker(metaclass=ABCMeta):
                     types.append(tmp_t)
 
         uniq_t = set(types)
+        cls.log(uniq_t)
         return uniq_t
 
+    @classmethod
+    def get_all_files(cls, path):
+        d_files = {}
+        for d, dir, files in os.walk(path):
+            for f in files:
+                f_path = os.path.join(d, f)
+                tmp_t = cls.get_type(f_path)
+                if tmp_t is not None:
+                    d_files[f_path] = tmp_t
+        return d_files
 
     @classmethod
     def check_create(cls, path, file=True):

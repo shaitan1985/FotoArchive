@@ -67,15 +67,13 @@ class Config(object):
             tree = json.load(f)
         self.__setattr__('type_paths', tree)
 
-
 @singleton
-class Initializer(object):
+class Flags(object):
     __slots__ = ('__params',)
 
     def __init__(self):
         self.__params = {}
-        Config()
-        self.__fill_moduls()
+        self.__fill_flags()
 
     def __iter__(self):
         return iter(self.__params.items())
@@ -98,7 +96,43 @@ class Initializer(object):
         except AttributeError:
             del self.__params[key]
 
-    def __check_exists(self):
+    def __fill_flags(self):
+        """ некоторые флаги"""
+        self.__setattr__('got_work', False)
+
+
+@singleton
+class Initializer(object):
+    __slots__ = ('__moduls', )
+
+    def __init__(self):
+        Config()
+        self.__moduls = {}
+        self.__fill_moduls()
+        self.__check_import_path()
+
+    def __iter__(self):
+        return iter(self.__moduls.items())
+
+    def __getattribute__(self, key):
+        try:
+            return super().__getattribute__(key)
+        except AttributeError:
+            return self.__moduls.get(key)
+
+    def __setattr__(self, key, value):
+        try:
+            super().__setattr__(key, value)
+        except AttributeError:
+            self.__moduls[key] = value
+
+    def __delattr__(self, key):
+        try:
+            super().__delattr__(key)
+        except AttributeError:
+            del self.__moduls[key]
+
+    def __check_import_path(self):
         FSWorker.check_create(Config().type_paths.get('import'), False)
 
     def __fill_moduls(self):
@@ -108,11 +142,16 @@ class Initializer(object):
     def start_works(self):
         FSWorker.log('start_works')
         for key, ex in self:
-
-            FSWorker.log(key, ex)
-
+            FSWorker.log('Now working:', key, ex)
             ex.execute()
         FSWorker.log('ended works')
+
+    def skip_all_done(self):
+        for key, ex in self:
+            ex.make_undone()
+            FSWorker.log(ex, 'made undone')
+
+
 
 
 
@@ -125,29 +164,54 @@ class TaskExecuterTemplate(metaclass=ABCMeta):
     def execute(self):
         pass
 
+    def make_undone(self):
+        self.__done = False
+
+    def make_done(self):
+        self.__done = True
 
 
 class FolderUpdateChecker(TaskExecuterTemplate):
     """ проверка наличия файлов для обработки"""
     def __init__(self):
         super().__init__()
-        FSWorker.log('123')
+        FSWorker.log('FolderUpdateChecker started')
         FSWorker.log(Config().type_paths.get('import'))
         self.__import_path = Config().type_paths.get('import')
 
     def execute(self):
         if self.__got_work():
-            FSWorker.log('послал сообщение')
+            Flags().got_work = True
         FSWorker.log('nu kakto tak')
-        self.__done = True
+        self.make_done()
 
     def __got_work(self):
         if FSWorker.get_all_types(self.__import_path):
-            FSWorker.log('got work')
+            FSWorker.log('got work', self.__import_path)
             return True
         return False
 
 
+class ToArchiveMover(TaskExecuterTemplate):
+     def __init__(self):
+        super().__init__()
+        FSWorker.log('ToArchiveMover started')
+
+     def execute(self):
+        """ перенос """
+        self.make_done()
+
+
+class ArtObject(metaclass=ABCMeta):
+
+    def __init__(self, path):
+        self.path = path
+        self.type = FSWorker.get_type(path)
+        self.archive_path = self.path_from_date()
+
+
+    def path_from_date(self):
+        pass
 
 
 
@@ -177,6 +241,7 @@ def main():
     """
 
     config = Config()
+    Flags()
     FSWorker.log('config3', config.__dict__)
 
 

@@ -1,8 +1,13 @@
-import exifread
 import datetime
+import os
+
+import exifread
+import enzyme
 
 
-path_name = "picture2.jpg"
+
+# path_name = "picture2.jpg"
+path_name2 = os.path.join(os.path.dirname(__file__), "video.mp4")
 with open(path_name, 'rb') as f:
 
     tags = exifread.process_file(f)
