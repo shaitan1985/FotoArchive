@@ -11,12 +11,14 @@ import os
 import hashlib
 import logging
 import datetime
+import shutil
 from abc import ABCMeta, abstractmethod
 
 
 import fleep
 import exifread
-import enzyme
+from hachoir.parser import createParser
+from hachoir.metadata import extractMetadata
 
 class FSWorker(metaclass=ABCMeta):
 
@@ -31,7 +33,7 @@ class FSWorker(metaclass=ABCMeta):
         du = st.f_bsize * st.f_bavail
 
         du = st.f_bsize * st.f_bavail / 1024 / 1024 # кб в мб
-        print(du)
+        cls.log(du)
 
 
     @classmethod
@@ -72,24 +74,52 @@ class FSWorker(metaclass=ABCMeta):
         return None
 
     @classmethod
-    def get_born_date(cls, path, type):
+    def get_born_date(cls, path):
+        f_type = cls.get_type(path)
         date = None
-        if type == 'raster-image':
+        if f_type == 'raster-image':
             date = cls.__date_from_exif(path)
-        elif type == 'video':
+        elif f_type == 'video':
             date = cls.__date_from_videometa(path)
-        elif type == 'raw-image':
+        elif f_type == 'raw-image':
             date = cls.__date_from_raw(path)
         if date is None:
-            date = __get_date_from_file(path)
+            date = cls.__get_date_from_file(path)
 
         return date
 
+    @classmethod
+    def __date_from_raw(cls):
+        pass
+
+    @classmethod
+    def __get_date_from_file(cls, path):
+        t = os.path.getmtime(path)
+        return datetime.datetime.fromtimestamp(t)
 
     @classmethod
     def __date_from_videometa(cls, path):
         """достать дату из видео"""
-        return None
+        if True:
+            return None
+        # Пока заглушка
+        parser = createParser(path)
+        if not parser:
+            cls.log('Unable to parse file "{}"'.format(path))
+            return None
+
+        with parser:
+            try:
+                metadata = extractMetadata(parser)
+            except Exception as err:
+                cls.log("Metadata extraction error: {}".format(err))
+                metadata = None
+        if not metadata:
+            cls.log("Unable to extract metadata")
+            return None
+        for line in metadata.exportPlaintext():
+            cls.log(line)
+
 
 
     @classmethod
@@ -100,15 +130,12 @@ class FSWorker(metaclass=ABCMeta):
             tags = exifread.process_file(f)
 
         value = str(tags.get('EXIF DateTimeOriginal'))
-        print(value)
 
         try:
             date = datetime.datetime.strptime(value, "%Y:%m:%d %H:%M:%S")
         except ValueError:
             return None
         return date
-
-
 
 
     @classmethod
@@ -142,10 +169,23 @@ class FSWorker(metaclass=ABCMeta):
                 return False
         else:
             try:
-                os.mkdir(path)
-            except OSError:
-                pass
+                os.makedirs(path)
+            except OSError as err:
+                cls.log(err)
         return True
+
+    @classmethod
+    def copy_file(cls, src, dst):
+        try:
+            shutil.copy2(src, dst)
+            return True
+        except IOError as err:
+            cls.log('Возникла ошибка при копировании "{}"', src, err, )
+        return False
+
+
+
+
 
 
 

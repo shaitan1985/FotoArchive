@@ -14,6 +14,7 @@
 from abc import ABCMeta, abstractmethod
 import json
 import os.path as Path
+from collections import OrderedDict
 
 
 from ata.fs_worker import FSWorker
@@ -107,12 +108,12 @@ class Initializer(object):
 
     def __init__(self):
         Config()
-        self.__moduls = {}
+        self.__moduls = OrderedDict()
         self.__fill_moduls()
         self.__check_import_path()
 
     def __iter__(self):
-        return iter(self.__moduls.items())
+        return iter(sorted(self.__moduls.items()))
 
     def __getattribute__(self, key):
         try:
@@ -138,6 +139,7 @@ class Initializer(object):
     def __fill_moduls(self):
         """ ключ, это порядок выполнения"""
         self.__setattr__('q20', FolderUpdateChecker())
+        self.__setattr__('q30', ToArchiveMover())
 
     def start_works(self):
         FSWorker.log('start_works')
@@ -150,9 +152,6 @@ class Initializer(object):
         for key, ex in self:
             ex.make_undone()
             FSWorker.log(ex, 'made undone')
-
-
-
 
 
 class TaskExecuterTemplate(metaclass=ABCMeta):
@@ -193,17 +192,70 @@ class FolderUpdateChecker(TaskExecuterTemplate):
 
 
 class ToArchiveMover(TaskExecuterTemplate):
-     def __init__(self):
+    def __init__(self):
         super().__init__()
         FSWorker.log('ToArchiveMover started')
 
-     def execute(self):
+    def execute(self):
         """ перенос """
+        # проверить папки по типам
+        import_path = Path.join(Path.dirname(__file__),
+                                                '..',
+                                                 Config().type_paths.get('import'))
+
+        self.__check_folders(import_path)
+        # получить список файлов
+        files = FSWorker.get_all_files(import_path)
+        FSWorker.log('123', files, type(files))
+        # пройти по файлам
+
+        for file, f_type in files.items():
+            FSWorker.log(FSWorker.get_hash_md5(file), file)
+            if True: # хэш не записан
+                date = FSWorker.get_born_date(file)
+                FSWorker.log('born date of "{}" is "{}"'.format(file, date))
+                folder = self.__date_to_folder(date, f_type)
+                if folder is None:
+                    continue
+                _, f = Path.split(file)
+                FSWorker.copy_file(file, Path.join(folder, f))
+
+
+            # проверить хэш
+            # создать/проверить папку
+            # переместить и записать хэш
+
         self.make_done()
+
+    def __date_to_folder(self, date, f_type):
+        type_path = Config().type_paths.get(f_type)
+        if type_path is not None:
+            path = Path.join(Path.dirname(__file__),
+                                            '..',
+                                            type_path,
+                                            str(date.year),
+                                            str(date.month),
+                                            str(date.day))
+            if FSWorker.check_create(path, False):
+                return path
+        return None
+
+
+    def __check_folders(self, path):
+        for f_type in FSWorker.get_all_types(path):
+            folder = Config().type_paths.get(f_type)
+            FSWorker.log('type folder', folder)
+            if folder is None:
+                continue
+
+            FSWorker.log(FSWorker.check_create(Path.join(Path.dirname(__file__),
+                                                         '..',
+                                                         folder),
+                                                        False))
 
 
 class ArtObject(metaclass=ABCMeta):
-
+    """ Объект фото/исходник/видео"""
     def __init__(self, path):
         self.path = path
         self.type = FSWorker.get_type(path)

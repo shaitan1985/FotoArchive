@@ -1,12 +1,139 @@
-[DEBUG] 2018-03-28 15:13:21 [fs_worker.py_Line:45] ('config3', None)
-[DEBUG] 2018-03-28 15:13:21 [fs_worker.py_Line:45] ('FolderUpdateChecker started',)
-[DEBUG] 2018-03-28 15:13:21 [fs_worker.py_Line:45] ('import',)
-[DEBUG] 2018-03-28 15:13:21 [fs_worker.py_Line:45] ('Initializer2', None)
-[DEBUG] 2018-03-28 15:13:21 [fs_worker.py_Line:45] (('q20', <ata.FolderUpdateChecker object at 0x7fd3aa2e1be0>),)
-[DEBUG] 2018-03-28 15:13:21 [fs_worker.py_Line:45] ('start_works',)
-[DEBUG] 2018-03-28 15:13:21 [fs_worker.py_Line:45] ('Now working:', 'q20', <ata.FolderUpdateChecker object at 0x7fd3aa2e1be0>)
-[DEBUG] 2018-03-28 15:13:21 [fs_worker.py_Line:45] ({'video', 'raster-image'},)
-[DEBUG] 2018-03-28 15:13:21 [fs_worker.py_Line:45] ('got work', 'import')
-[DEBUG] 2018-03-28 15:13:21 [fs_worker.py_Line:45] ('nu kakto tak',)
-[DEBUG] 2018-03-28 15:13:21 [fs_worker.py_Line:45] ('ended works',)
-[DEBUG] 2018-03-28 15:13:21 [fs_worker.py_Line:45] ('config4', None)
+[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('config3', None)
+[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('FolderUpdateChecker started',)
+[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('import',)
+[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('ToArchiveMover started',)
+[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] (FileExistsError(17, 'File exists'),)
+[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('Initializer2', None)
+[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] (('q20', <ata.FolderUpdateChecker object at 0x7f09df6fc3c8>),)
+[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] (('q30', <ata.ToArchiveMover object at 0x7f09df6fc400>),)
+[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('start_works',)
+[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('Now working:', 'q20', <ata.FolderUpdateChecker object at 0x7f09df6fc3c8>)
+[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ({'raster-image', 'video'},)
+[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('got work', 'import')
+[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('nu kakto tak',)
+[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('Now working:', 'q30', <ata.ToArchiveMover object at 0x7f09df6fc400>)
+[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ({'raster-image', 'video'},)
+[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('type folder', 'storage/photo/raster-image')
+[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] (True,)
+[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('type folder', 'storage/video')
+[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] (True,)
+[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('123', {'/home/buhgalter1/virtualenvs/fotoarchive/FotoArchive/ata/../import/video2.AVI': 'video', '/home/buhgalter1/virtualenvs/fotoarchive/FotoArchive/ata/../import/video.mp4': 'video', '/home/buhgalter1/virtualenvs/fotoarchive/FotoArchive/ata/../import/picture2.jpg': 'raster-image', '/home/buhgalter1/virtualenvs/fotoarchive/FotoArchive/ata/../import/picture.jpg': 'raster-image'}, <class 'dict'>)
+[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('365c4411ccfde20bb5c30d407e2dd35f', '/home/buhgalter1/virtualenvs/fotoarchive/FotoArchive/ata/../import/video2.AVI')
+[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('born date of "/home/buhgalter1/virtualenvs/fotoarchive/FotoArchive/ata/../import/video2.AVI" is "2018-03-29 09:52:53.841013"',)
+[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('85ee7fd3712a8f02bbf9e6dafaa554e3', '/home/buhgalter1/virtualenvs/fotoarchive/FotoArchive/ata/../import/video.mp4')
+[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('born date of "/home/buhgalter1/virtualenvs/fotoarchive/FotoArchive/ata/../import/video.mp4" is "2018-03-28 15:08:31.442650"',)
+[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('999dd17bdda0e5bc1b73f9659685dbd3', '/home/buhgalter1/virtualenvs/fotoarchive/FotoArchive/ata/../import/picture2.jpg')
+[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:41] JPEG format recognized data[0:2]=0xFFD8
+[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:44] data[2]=0xFF data[3]=0xE0 data[6:10]=b'JFIF'
+[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:47]  Length offset is 16
+[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:57]  Added to zero
+[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:59]  Set segment base to 0x14
+[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:67]  Segment base 0x14
+[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:92]   APP2 at base 0x14
+[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:94]   Length: 0xC 0x58
+[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:95]  Code: b'ICC_'
+[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:97]  Increment base by 3162
+[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:67]  Segment base 0xC6E
+[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:70]   APP1 at base 0xC6E
+[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:72]   Length: 0x2 0x14
+[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:73]   Code: b'Exif'
+[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:75]   Decrement base by 2 to get to pre-segment header (for compatibility with later code)
+[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:189] Endian format is M (Motorola)
+[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:203] IFD 0 (Image) at offset 8:
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  Make: (0x010F) ASCII=HTC @ 18
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  Model: (0x0110) ASCII=Desire HD @ 110
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  Orientation: (0x0112) Short=Horizontal (normal) @ 42
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  XResolution: (0x011A) Ratio=72 @ 120
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  YResolution: (0x011B) Ratio=72 @ 128
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ResolutionUnit: (0x0128) Short=Pixels/Inch @ 78
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ExifOffset: (0x8769) Long=136 @ 90
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:248] GPS SubIFD at offset 310:
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  GPSLatitudeRef: (0x0001) ASCII=N @ 320
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  GPSLatitude: (0x0002) Ratio=[0, 0, 0] @ 424
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  GPSLongitudeRef: (0x0003) ASCII=E @ 344
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  GPSLongitude: (0x0004) Ratio=[0, 0, 0] @ 448
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  GPSAltitudeRef: (0x0005) Byte=0 @ 368
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  GPSAltitude: (0x0006) Ratio=0 @ 472
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  GPSTimeStamp: (0x0007) Ratio=[14, 13, 5500] @ 480
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  GPSMapDatum: (0x0012) ASCII=WGS-84 @ 504
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  GPSDate: (0x001D) ASCII=2011:08:02 @ 512
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  GPSInfo: (0x8825) Long=310 @ 102
+[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:209] Exif SubIFD at offset 136:
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ISOSpeedRatings: (0x8827) Short=400 @ 146
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ExifVersion: (0x9000) Undefined=0220 @ 158
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  DateTimeOriginal: (0x9003) ASCII=2011:08:02 18:13:55 @ 262
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  DateTimeDigitized: (0x9004) ASCII=2011:08:02 18:13:55 @ 282
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ComponentsConfiguration: (0x9101) Undefined=Y @ 194
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  FocalLength: (0x920A) Ratio=123/25 @ 302
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  FlashPixVersion: (0xA000) Undefined=0100 @ 218
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ColorSpace: (0xA001) Short=sRGB @ 230
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ExifImageWidth: (0xA002) Long=1536 @ 242
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ExifImageLength: (0xA003) Long=2568 @ 254
+[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('born date of "/home/buhgalter1/virtualenvs/fotoarchive/FotoArchive/ata/../import/picture2.jpg" is "2011-08-02 18:13:55"',)
+[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('12f3169be3555f26d94ff4397774b6dc', '/home/buhgalter1/virtualenvs/fotoarchive/FotoArchive/ata/../import/picture.jpg')
+[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:41] JPEG format recognized data[0:2]=0xFFD8
+[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:44] data[2]=0xFF data[3]=0xE1 data[6:10]=b'Exif'
+[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:67]  Segment base 0x2
+[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:70]   APP1 at base 0x2
+[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:72]   Length: 0xF 0x35
+[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:73]   Code: b'Exif'
+[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:75]   Decrement base by 2 to get to pre-segment header (for compatibility with later code)
+[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:189] Endian format is I (Intel)
+[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:203] IFD 0 (Image) at offset 8:
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ImageWidth: (0x0100) Short=3300 @ 18
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ImageLength: (0x0101) Short=4950 @ 30
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  BitsPerSample: (0x0102) Short=[8, 8, 8] @ 182
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  PhotometricInterpretation: (0x0106) Short=2 @ 54
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  Make: (0x010F) ASCII=Canon @ 188
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  Model: (0x0110) ASCII=Canon EOS 5D Mark III @ 194
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  Orientation: (0x0112) Short=Horizontal (normal) @ 90
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  SamplesPerPixel: (0x0115) Short=3 @ 102
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  XResolution: (0x011A) Ratio=300 @ 216
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  YResolution: (0x011B) Ratio=300 @ 224
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ResolutionUnit: (0x0128) Short=Pixels/Inch @ 138
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  Software: (0x0131) ASCII=Adobe Photoshop CC (Windows) @ 232
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  DateTime: (0x0132) ASCII=2015:04:20 19:34:56 @ 261
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ExifOffset: (0x8769) Long=284 @ 174
+[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:203] IFD 1 (Thumbnail) at offset 868:
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  Compression: (0x0103) Short=JPEG (old-style) @ 878
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  XResolution: (0x011A) Ratio=72 @ 946
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  YResolution: (0x011B) Ratio=72 @ 954
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ResolutionUnit: (0x0128) Short=Pixels/Inch @ 914
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  JPEGInterchangeFormat: (0x0201) Long=962 @ 926
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  JPEGInterchangeFormatLength: (0x0202) Long=2923 @ 938
+[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:209] Exif SubIFD at offset 284:
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ExposureTime: (0x829A) Ratio=1/160 @ 674
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  FNumber: (0x829D) Ratio=16 @ 682
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ExposureProgram: (0x8822) Short=Manual @ 318
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ISOSpeedRatings: (0x8827) Short=100 @ 330
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  SensitivityType: (0x8830) Short=Recommended Exposure Index @ 342
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  RecommendedExposureIndex: (0x8832) Long=100 @ 354
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ExifVersion: (0x9000) Undefined=0230 @ 366
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  DateTimeOriginal: (0x9003) ASCII=2014:04:16 20:10:37 @ 690
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  DateTimeDigitized: (0x9004) ASCII=2014:04:16 20:10:37 @ 710
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ShutterSpeedValue: (0x9201) Signed Ratio=915241/125000 @ 730
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ApertureValue: (0x9202) Ratio=8 @ 738
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ExposureBiasValue: (0x9204) Signed Ratio=0 @ 746
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  MaxApertureValue: (0x9205) Ratio=4 @ 754
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  MeteringMode: (0x9207) Short=Pattern @ 450
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  Flash: (0x9209) Short=Flash fired, compulsory flash mode @ 462
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  FocalLength: (0x920A) Ratio=75 @ 762
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  SubSecTimeOriginal: (0x9291) ASCII=07 @ 486
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  SubSecTimeDigitized: (0x9292) ASCII=07 @ 498
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ColorSpace: (0xA001) Short=sRGB @ 510
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ExifImageWidth: (0xA002) Long=3300 @ 522
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ExifImageLength: (0xA003) Long=4950 @ 534
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  FocalPlaneXResolution: (0xA20E) Ratio=1600 @ 770
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  FocalPlaneYResolution: (0xA20F) Ratio=1600 @ 778
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  FocalPlaneResolutionUnit: (0xA210) Short=3 @ 570
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  CustomRendered: (0xA401) Short=Normal @ 582
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ExposureMode: (0xA402) Short=Manual Exposure @ 594
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  WhiteBalance: (0xA403) Short=Manual @ 606
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  SceneCaptureType: (0xA406) Short=Standard @ 618
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  BodySerialNumber: (0xA431) ASCII=083024013916 @ 786
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  LensSpecification: (0xA432) Ratio=[24, 105, 0/0, 0/0] @ 799
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  LensModel: (0xA434) ASCII=EF24-105mm f/4L IS USM @ 831
+[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  LensSerialNumber: (0xA435) ASCII=0000106e79 @ 854
+[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('born date of "/home/buhgalter1/virtualenvs/fotoarchive/FotoArchive/ata/../import/picture.jpg" is "2014-04-16 20:10:37"',)
+[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('ended works',)
+[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('config4', None)
