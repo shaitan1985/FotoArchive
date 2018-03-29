@@ -1,139 +1,404 @@
-[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('config3', None)
-[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('FolderUpdateChecker started',)
-[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('import',)
-[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('ToArchiveMover started',)
-[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] (FileExistsError(17, 'File exists'),)
-[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('Initializer2', None)
-[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] (('q20', <ata.FolderUpdateChecker object at 0x7f09df6fc3c8>),)
-[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] (('q30', <ata.ToArchiveMover object at 0x7f09df6fc400>),)
-[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('start_works',)
-[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('Now working:', 'q20', <ata.FolderUpdateChecker object at 0x7f09df6fc3c8>)
-[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ({'raster-image', 'video'},)
-[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('got work', 'import')
-[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('nu kakto tak',)
-[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('Now working:', 'q30', <ata.ToArchiveMover object at 0x7f09df6fc400>)
-[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ({'raster-image', 'video'},)
-[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('type folder', 'storage/photo/raster-image')
-[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] (True,)
-[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('type folder', 'storage/video')
-[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] (True,)
-[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('123', {'/home/buhgalter1/virtualenvs/fotoarchive/FotoArchive/ata/../import/video2.AVI': 'video', '/home/buhgalter1/virtualenvs/fotoarchive/FotoArchive/ata/../import/video.mp4': 'video', '/home/buhgalter1/virtualenvs/fotoarchive/FotoArchive/ata/../import/picture2.jpg': 'raster-image', '/home/buhgalter1/virtualenvs/fotoarchive/FotoArchive/ata/../import/picture.jpg': 'raster-image'}, <class 'dict'>)
-[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('365c4411ccfde20bb5c30d407e2dd35f', '/home/buhgalter1/virtualenvs/fotoarchive/FotoArchive/ata/../import/video2.AVI')
-[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('born date of "/home/buhgalter1/virtualenvs/fotoarchive/FotoArchive/ata/../import/video2.AVI" is "2018-03-29 09:52:53.841013"',)
-[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('85ee7fd3712a8f02bbf9e6dafaa554e3', '/home/buhgalter1/virtualenvs/fotoarchive/FotoArchive/ata/../import/video.mp4')
-[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('born date of "/home/buhgalter1/virtualenvs/fotoarchive/FotoArchive/ata/../import/video.mp4" is "2018-03-28 15:08:31.442650"',)
-[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('999dd17bdda0e5bc1b73f9659685dbd3', '/home/buhgalter1/virtualenvs/fotoarchive/FotoArchive/ata/../import/picture2.jpg')
-[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:41] JPEG format recognized data[0:2]=0xFFD8
-[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:44] data[2]=0xFF data[3]=0xE0 data[6:10]=b'JFIF'
-[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:47]  Length offset is 16
-[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:57]  Added to zero
-[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:59]  Set segment base to 0x14
-[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:67]  Segment base 0x14
-[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:92]   APP2 at base 0x14
-[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:94]   Length: 0xC 0x58
-[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:95]  Code: b'ICC_'
-[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:97]  Increment base by 3162
-[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:67]  Segment base 0xC6E
-[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:70]   APP1 at base 0xC6E
-[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:72]   Length: 0x2 0x14
-[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:73]   Code: b'Exif'
-[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:75]   Decrement base by 2 to get to pre-segment header (for compatibility with later code)
-[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:189] Endian format is M (Motorola)
-[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:203] IFD 0 (Image) at offset 8:
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  Make: (0x010F) ASCII=HTC @ 18
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  Model: (0x0110) ASCII=Desire HD @ 110
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  Orientation: (0x0112) Short=Horizontal (normal) @ 42
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  XResolution: (0x011A) Ratio=72 @ 120
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  YResolution: (0x011B) Ratio=72 @ 128
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ResolutionUnit: (0x0128) Short=Pixels/Inch @ 78
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ExifOffset: (0x8769) Long=136 @ 90
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:248] GPS SubIFD at offset 310:
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  GPSLatitudeRef: (0x0001) ASCII=N @ 320
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  GPSLatitude: (0x0002) Ratio=[0, 0, 0] @ 424
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  GPSLongitudeRef: (0x0003) ASCII=E @ 344
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  GPSLongitude: (0x0004) Ratio=[0, 0, 0] @ 448
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  GPSAltitudeRef: (0x0005) Byte=0 @ 368
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  GPSAltitude: (0x0006) Ratio=0 @ 472
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  GPSTimeStamp: (0x0007) Ratio=[14, 13, 5500] @ 480
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  GPSMapDatum: (0x0012) ASCII=WGS-84 @ 504
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  GPSDate: (0x001D) ASCII=2011:08:02 @ 512
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  GPSInfo: (0x8825) Long=310 @ 102
-[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:209] Exif SubIFD at offset 136:
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ISOSpeedRatings: (0x8827) Short=400 @ 146
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ExifVersion: (0x9000) Undefined=0220 @ 158
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  DateTimeOriginal: (0x9003) ASCII=2011:08:02 18:13:55 @ 262
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  DateTimeDigitized: (0x9004) ASCII=2011:08:02 18:13:55 @ 282
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ComponentsConfiguration: (0x9101) Undefined=Y @ 194
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  FocalLength: (0x920A) Ratio=123/25 @ 302
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  FlashPixVersion: (0xA000) Undefined=0100 @ 218
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ColorSpace: (0xA001) Short=sRGB @ 230
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ExifImageWidth: (0xA002) Long=1536 @ 242
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ExifImageLength: (0xA003) Long=2568 @ 254
-[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('born date of "/home/buhgalter1/virtualenvs/fotoarchive/FotoArchive/ata/../import/picture2.jpg" is "2011-08-02 18:13:55"',)
-[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('12f3169be3555f26d94ff4397774b6dc', '/home/buhgalter1/virtualenvs/fotoarchive/FotoArchive/ata/../import/picture.jpg')
-[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:41] JPEG format recognized data[0:2]=0xFFD8
-[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:44] data[2]=0xFF data[3]=0xE1 data[6:10]=b'Exif'
-[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:67]  Segment base 0x2
-[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:70]   APP1 at base 0x2
-[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:72]   Length: 0xF 0x35
-[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:73]   Code: b'Exif'
-[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:75]   Decrement base by 2 to get to pre-segment header (for compatibility with later code)
-[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:189] Endian format is I (Intel)
-[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:203] IFD 0 (Image) at offset 8:
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ImageWidth: (0x0100) Short=3300 @ 18
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ImageLength: (0x0101) Short=4950 @ 30
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  BitsPerSample: (0x0102) Short=[8, 8, 8] @ 182
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  PhotometricInterpretation: (0x0106) Short=2 @ 54
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  Make: (0x010F) ASCII=Canon @ 188
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  Model: (0x0110) ASCII=Canon EOS 5D Mark III @ 194
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  Orientation: (0x0112) Short=Horizontal (normal) @ 90
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  SamplesPerPixel: (0x0115) Short=3 @ 102
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  XResolution: (0x011A) Ratio=300 @ 216
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  YResolution: (0x011B) Ratio=300 @ 224
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ResolutionUnit: (0x0128) Short=Pixels/Inch @ 138
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  Software: (0x0131) ASCII=Adobe Photoshop CC (Windows) @ 232
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  DateTime: (0x0132) ASCII=2015:04:20 19:34:56 @ 261
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ExifOffset: (0x8769) Long=284 @ 174
-[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:203] IFD 1 (Thumbnail) at offset 868:
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  Compression: (0x0103) Short=JPEG (old-style) @ 878
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  XResolution: (0x011A) Ratio=72 @ 946
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  YResolution: (0x011B) Ratio=72 @ 954
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ResolutionUnit: (0x0128) Short=Pixels/Inch @ 914
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  JPEGInterchangeFormat: (0x0201) Long=962 @ 926
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  JPEGInterchangeFormatLength: (0x0202) Long=2923 @ 938
-[DEBUG] 2018-03-29 16:51:08 [__init__.py_Line:209] Exif SubIFD at offset 284:
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ExposureTime: (0x829A) Ratio=1/160 @ 674
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  FNumber: (0x829D) Ratio=16 @ 682
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ExposureProgram: (0x8822) Short=Manual @ 318
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ISOSpeedRatings: (0x8827) Short=100 @ 330
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  SensitivityType: (0x8830) Short=Recommended Exposure Index @ 342
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  RecommendedExposureIndex: (0x8832) Long=100 @ 354
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ExifVersion: (0x9000) Undefined=0230 @ 366
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  DateTimeOriginal: (0x9003) ASCII=2014:04:16 20:10:37 @ 690
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  DateTimeDigitized: (0x9004) ASCII=2014:04:16 20:10:37 @ 710
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ShutterSpeedValue: (0x9201) Signed Ratio=915241/125000 @ 730
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ApertureValue: (0x9202) Ratio=8 @ 738
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ExposureBiasValue: (0x9204) Signed Ratio=0 @ 746
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  MaxApertureValue: (0x9205) Ratio=4 @ 754
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  MeteringMode: (0x9207) Short=Pattern @ 450
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  Flash: (0x9209) Short=Flash fired, compulsory flash mode @ 462
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  FocalLength: (0x920A) Ratio=75 @ 762
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  SubSecTimeOriginal: (0x9291) ASCII=07 @ 486
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  SubSecTimeDigitized: (0x9292) ASCII=07 @ 498
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ColorSpace: (0xA001) Short=sRGB @ 510
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ExifImageWidth: (0xA002) Long=3300 @ 522
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ExifImageLength: (0xA003) Long=4950 @ 534
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  FocalPlaneXResolution: (0xA20E) Ratio=1600 @ 770
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  FocalPlaneYResolution: (0xA20F) Ratio=1600 @ 778
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  FocalPlaneResolutionUnit: (0xA210) Short=3 @ 570
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  CustomRendered: (0xA401) Short=Normal @ 582
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  ExposureMode: (0xA402) Short=Manual Exposure @ 594
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  WhiteBalance: (0xA403) Short=Manual @ 606
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  SceneCaptureType: (0xA406) Short=Standard @ 618
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  BodySerialNumber: (0xA431) ASCII=083024013916 @ 786
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  LensSpecification: (0xA432) Ratio=[24, 105, 0/0, 0/0] @ 799
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  LensModel: (0xA434) ASCII=EF24-105mm f/4L IS USM @ 831
-[DEBUG] 2018-03-29 16:51:08 [classes.py_Line:267]  LensSerialNumber: (0xA435) ASCII=0000106e79 @ 854
-[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('born date of "/home/buhgalter1/virtualenvs/fotoarchive/FotoArchive/ata/../import/picture.jpg" is "2014-04-16 20:10:37"',)
-[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('ended works',)
-[DEBUG] 2018-03-29 16:51:08 [fs_worker.py_Line:53] ('config4', None)
+[DEBUG] 2018-03-29 23:50:04 [fs_worker.py_Line:53] ('config3', None)
+[DEBUG] 2018-03-29 23:50:04 [fs_worker.py_Line:53] ('FolderUpdateChecker started',)
+[DEBUG] 2018-03-29 23:50:04 [fs_worker.py_Line:53] ('import',)
+[DEBUG] 2018-03-29 23:50:04 [fs_worker.py_Line:53] ('ToArchiveMover started',)
+[DEBUG] 2018-03-29 23:50:04 [fs_worker.py_Line:53] (FileExistsError(17, 'File exists'),)
+[DEBUG] 2018-03-29 23:50:04 [fs_worker.py_Line:53] ('Initializer2', None)
+[DEBUG] 2018-03-29 23:50:04 [fs_worker.py_Line:53] (('q20', <ata.FolderUpdateChecker object at 0x7ff2c81a1198>),)
+[DEBUG] 2018-03-29 23:50:04 [fs_worker.py_Line:53] (('q30', <ata.ToArchiveMover object at 0x7ff2c81a1208>),)
+[DEBUG] 2018-03-29 23:50:04 [fs_worker.py_Line:53] ('start_works',)
+[DEBUG] 2018-03-29 23:50:04 [fs_worker.py_Line:53] ('Now working:', 'q20', <ata.FolderUpdateChecker object at 0x7ff2c81a1198>)
+[DEBUG] 2018-03-29 23:50:04 [fs_worker.py_Line:53] ({'raw-image', 'video', 'raster-image'},)
+[DEBUG] 2018-03-29 23:50:04 [fs_worker.py_Line:53] ('got work', 'import')
+[DEBUG] 2018-03-29 23:50:04 [fs_worker.py_Line:53] ('nu kakto tak',)
+[DEBUG] 2018-03-29 23:50:04 [fs_worker.py_Line:53] ('Now working:', 'q30', <ata.ToArchiveMover object at 0x7ff2c81a1208>)
+[DEBUG] 2018-03-29 23:50:04 [fs_worker.py_Line:53] ({'raw-image', 'video', 'raster-image'},)
+[DEBUG] 2018-03-29 23:50:04 [fs_worker.py_Line:53] ('type folder', 'storage/photo/raw-image')
+[DEBUG] 2018-03-29 23:50:04 [fs_worker.py_Line:53] (True,)
+[DEBUG] 2018-03-29 23:50:04 [fs_worker.py_Line:53] ('type folder', 'storage/video')
+[DEBUG] 2018-03-29 23:50:04 [fs_worker.py_Line:53] (True,)
+[DEBUG] 2018-03-29 23:50:04 [fs_worker.py_Line:53] ('type folder', 'storage/photo/raster-image')
+[DEBUG] 2018-03-29 23:50:04 [fs_worker.py_Line:53] (True,)
+[DEBUG] 2018-03-29 23:50:04 [fs_worker.py_Line:53] ('123', {'/media/second/VirtualEnvs/fotoarchive/FotoArchive/ata/../import/IMG_1525.JPG': 'raster-image', '/media/second/VirtualEnvs/fotoarchive/FotoArchive/ata/../import/IMG_1525.CR2': 'raw-image', '/media/second/VirtualEnvs/fotoarchive/FotoArchive/ata/../import/video2.AVI': 'video', '/media/second/VirtualEnvs/fotoarchive/FotoArchive/ata/../import/video.mp4': 'video'}, <class 'dict'>)
+[DEBUG] 2018-03-29 23:50:11 [fs_worker.py_Line:53] ('30568511f9aa022095020a3f2bb44982', '/media/second/VirtualEnvs/fotoarchive/FotoArchive/ata/../import/IMG_1525.JPG')
+[DEBUG] 2018-03-29 23:50:11 [__init__.py_Line:41] JPEG format recognized data[0:2]=0xFFD8
+[DEBUG] 2018-03-29 23:50:11 [__init__.py_Line:44] data[2]=0xFF data[3]=0xE1 data[6:10]=b'Exif'
+[DEBUG] 2018-03-29 23:50:11 [__init__.py_Line:67]  Segment base 0x2
+[DEBUG] 2018-03-29 23:50:11 [__init__.py_Line:70]   APP1 at base 0x2
+[DEBUG] 2018-03-29 23:50:11 [__init__.py_Line:72]   Length: 0x67 0x90
+[DEBUG] 2018-03-29 23:50:11 [__init__.py_Line:73]   Code: b'Exif'
+[DEBUG] 2018-03-29 23:50:11 [__init__.py_Line:75]   Decrement base by 2 to get to pre-segment header (for compatibility with later code)
+[DEBUG] 2018-03-29 23:50:11 [__init__.py_Line:189] Endian format is I (Intel)
+[DEBUG] 2018-03-29 23:50:11 [__init__.py_Line:203] IFD 0 (Image) at offset 8:
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Make: (0x010F) ASCII=Canon @ 158
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Model: (0x0110) ASCII=Canon EOS 70D @ 164
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Orientation: (0x0112) Short=Rotated 90 CCW @ 42
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  XResolution: (0x011A) Ratio=72 @ 196
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  YResolution: (0x011B) Ratio=72 @ 204
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  ResolutionUnit: (0x0128) Short=Pixels/Inch @ 78
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  DateTime: (0x0132) ASCII=2018:03:17 13:30:22 @ 212
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Artist: (0x013B) ASCII= @ 102
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  YCbCrPositioning: (0x0213) Short=Co-sited @ 114
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Copyright: (0x8298) ASCII= @ 126
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  ExifOffset: (0x8769) Long=360 @ 138
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:248] GPS SubIFD at offset 9620:
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  GPSVersionID: (0x0000) Byte=[2, 3, 0, 0] @ 9630
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  GPSInfo: (0x8825) Long=9620 @ 150
+[DEBUG] 2018-03-29 23:50:11 [__init__.py_Line:203] IFD 1 (Thumbnail) at offset 11414:
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Compression: (0x0103) Short=JPEG (old-style) @ 11424
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  XResolution: (0x011A) Ratio=72 @ 11492
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  YResolution: (0x011B) Ratio=72 @ 11500
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  ResolutionUnit: (0x0128) Short=Pixels/Inch @ 11460
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  JPEGInterchangeFormat: (0x0201) Long=11508 @ 11472
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  JPEGInterchangeFormatLength: (0x0202) Long=14994 @ 11484
+[DEBUG] 2018-03-29 23:50:11 [__init__.py_Line:209] Exif SubIFD at offset 360:
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  ExposureTime: (0x829A) Ratio=1/2000 @ 822
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  FNumber: (0x829D) Ratio=9/5 @ 830
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  ExposureProgram: (0x8822) Short=Manual @ 394
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  ISOSpeedRatings: (0x8827) Short=100 @ 406
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  SensitivityType: (0x8830) Short=Recommended Exposure Index @ 418
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  RecommendedExposureIndex: (0x8832) Long=100 @ 430
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  ExifVersion: (0x9000) Undefined=0230 @ 442
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  DateTimeOriginal: (0x9003) ASCII=2018:03:17 13:30:22 @ 838
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  DateTimeDigitized: (0x9004) ASCII=2018:03:17 13:30:22 @ 858
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  ComponentsConfiguration: (0x9101) Undefined=YCbCr @ 478
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  ShutterSpeedValue: (0x9201) Signed Ratio=11 @ 878
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  ApertureValue: (0x9202) Ratio=13/8 @ 886
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  ExposureBiasValue: (0x9204) Signed Ratio=0 @ 894
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  MeteringMode: (0x9207) Short=Pattern @ 526
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Flash: (0x9209) Short=Flash did not fire, compulsory flash mode @ 538
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  FocalLength: (0x920A) Ratio=50 @ 902
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  MakerNote: (0x927C) Undefined=[41, 0, 1, 0, 3, 0, 49, 0, 0, 0, 128, 5, 0, 0, 2, 0, 3, 0, 4, 0, ... ] @ 910
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  UserComment: (0x9286) Undefined=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] @ 9128
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  SubSecTime: (0x9290) ASCII=93 @ 586
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  SubSecTimeOriginal: (0x9291) ASCII=93 @ 598
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  SubSecTimeDigitized: (0x9292) ASCII=93 @ 610
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  FlashPixVersion: (0xA000) Undefined=0100 @ 622
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  ColorSpace: (0xA001) Short=sRGB @ 634
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  ExifImageWidth: (0xA002) Short=5472 @ 646
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  ExifImageLength: (0xA003) Short=3648 @ 658
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:248] Interoperability SubIFD at offset 9392:
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  InteroperabilityIndex: (0x0001) ASCII=R98 @ 9402
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  InteroperabilityVersion: (0x0002) Undefined=[48, 49, 48, 48] @ 9414
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  InteroperabilityOffset: (0xA005) Long=9392 @ 670
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  FocalPlaneXResolution: (0xA20E) Ratio=5472000/899 @ 9422
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  FocalPlaneYResolution: (0xA20F) Ratio=3648000/599 @ 9430
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  FocalPlaneResolutionUnit: (0xA210) Short=2 @ 706
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  CustomRendered: (0xA401) Short=Normal @ 718
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  ExposureMode: (0xA402) Short=Manual Exposure @ 730
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  WhiteBalance: (0xA403) Short=Auto @ 742
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  SceneCaptureType: (0xA406) Short=Standard @ 754
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  CameraOwnerName: (0xA430) ASCII= @ 766
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  BodySerialNumber: (0xA431) ASCII=253058001408 @ 9470
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  LensSpecification: (0xA432) Ratio=[50, 50, 0, 0] @ 9502
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  LensModel: (0xA434) ASCII=EF50mm f/1.8 II @ 9534
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  LensSerialNumber: (0xA435) ASCII=0000000000 @ 9608
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Tag 0x0001: (0x0001) Short=[98, 2, 0, 3, 0, 0, 0, 0, 0, 7, 0, 1, 0, 0, 0, 32767, 32767, 3, 2, 0, 4, 65535, 29, 50, 50, 1, 56, 288, 0, 0, 0, 0, 65535, 65535, 65535, 0, 0, 0, 0, 65535, 65535, 0, 0, 32767, 65535, 65535, 0, 0, 4] @ 1408
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Tag 0x0002: (0x0002) Short=[0, 50, 2838, 23076] @ 1506
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  FlashInfo: (0x0003) Short=[0, 0, 0, 0] @ 1514
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Tag 0x0004: (0x0004) Short=[68, 0, 160, 288, 52, 352, 0, 0, 3, 0, 8, 8, 141, 0, 0, 0, 0, 0, 1, 0, 0, 56, 352, 158, 0, 0, 248, 65535, 65535, 65535, 65535, 0, 0, 0] @ 1522
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  ImageType: (0x0006) ASCII=Canon EOS 70D @ 1590
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  FirmwareVersion: (0x0007) ASCII=Firmware Version 1.1.1 @ 1622
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  OwnerName: (0x0009) ASCII= @ 1646
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Tag 0x000D: (0x000D) Undefined=[] @ 1678
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  ModelID: (0x0010) Long=EOS 70D @ 1016
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  ThumbnailImageValidArea: (0x0013) Short=[0, 159, 7, 112] @ 3214
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Tag 0x0019: (0x0019) Short=1 @ 1040
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Tag 0x0026: (0x0026) Short=[278, 2, 31, 19, 5472, 3648, 5472, 3648, 229, 229, 229, 229, 229, 229, 229, 229, 229, 229, 229, 229, ... ] @ 3222
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Tag 0x0035: (0x0035) Long=[16, 180, 17, 0] @ 3500
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Tag 0x0093: (0x0093) Short=[64, 0, 0, 0, 0, 0, 0, 0, 65535, 0, 0, 0, 0, 0, 65535, 65535, 163, 65535, 0, 0, 0, 0, 0, 0, 0, 0, 65535, 0, 0, 0, 65535, 65535] @ 3516
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  LensModel: (0x0095) ASCII=EF50mm f/1.8 II @ 3580
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  InternalSerialNumber : (0x0096) ASCII=FA1803567 @ 3654
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  DustRemovalData : (0x0097) Undefined=[] @ 3670
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  CropInfo : (0x0098) Short=[0, 0, 0, 0] @ 4694
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Tag 0x0099: (0x0099) Long=[464, 3, 1, 84, 6, 257, 1, 0, 258, 1, 0, 260, 1, 0, 261, 1, 0, 262, 2, 3, ... ] @ 4702
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  AspectInfo: (0x009A) Long=[0, 5472, 3648, 0, 0] @ 5166
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Tag 0x00A0: (0x00A0) Short=[28, 0, 3, 0, 0, 0, 0, 0, 65535, 4000, 135, 0, 0, 0] @ 5186
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Tag 0x00AA: (0x00AA) Short=[12, 252, 1024, 1024, 705, 0] @ 5214
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  ColorSpace: (0x00B4) Short=sRGB @ 1184
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Tag 0x00D0: (0x00D0) Long=0 @ 1196
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Tag 0x00E0: (0x00E0) Short=[34, 5568, 3708, 1, 1, 84, 50, 5555, 3697, 0, 0, 0, 0, 0, 0, 0, 0] @ 5226
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Tag 0x4001: (0x4001) Short=[] @ 5260
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Tag 0x4008: (0x4008) Short=[134, 132, 135] @ 7886
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Tag 0x4009: (0x4009) Short=[0, 0, 0] @ 7892
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Tag 0x4010: (0x4010) ASCII= @ 7898
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Tag 0x4011: (0x4011) Undefined=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ... ] @ 7930
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Tag 0x4012: (0x4012) ASCII= @ 8182
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Tag 0x4013: (0x4013) Long=[44, 0, 0, 10, 4294967295, 0, 10, 0, 10, 0, 10] @ 8214
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Tag 0x4015: (0x4015) Undefined=[0, 33, 200, 1, 1, 0, 0, 0, 1, 0, 1, 0, 49, 0, 0, 0, 70, 0, 100, 0, ... ] @ 8258
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Tag 0x4016: (0x4016) Long=[28, 0, 1, 0, 0, 1, 1] @ 8714
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Tag 0x4018: (0x4018) Long=[28, 0, 3, 0, 0, 2, 1] @ 8742
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Tag 0x4019: (0x4019) Undefined=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] @ 8770
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Tag 0x4020: (0x4020) Long=[28, 0, 0, 0, 0, 2147483647, 0] @ 8800
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Tag 0x4021: (0x4021) Long=[20, 0, 0, 0, 1] @ 8828
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Tag 0x4024: (0x4024) Long=[212, 7, 1, 20, 1, 257, 1, 4294967295, 2, 20, 1, 513, 1, 4294967295, 3, 20, 1, 769, 1, 4294967295, ... ] @ 8848
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Tag 0x4025: (0x4025) Long=[36, 0, 0, 0, 0, 0, 0, 0, 0] @ 9060
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:267]  Tag 0x4027: (0x4027) Long=[24, 524547, 2969567282, 134217728, 13684944, 0] @ 9096
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:460] Canon MakerNote Tag 0x0001
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  1 Macromode 0x2
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  2 SelfTimer 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  3 Quality 0x3
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  4 FlashMode 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  5 ContinuousDriveMode 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  6 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  7 FocusMode 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  8 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  9 RecordMode 0x7
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  10 ImageSize 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  11 EasyShootingMode 0x1
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  12 DigitalZoom 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  13 Contrast 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  14 Saturation 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  15 Sharpness 0x7fff
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  16 ISO 0x7fff
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  17 MeteringMode 0x3
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  18 FocusType 0x2
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  19 AFPointSelected 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  20 ExposureMode 0x4
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  21 Unknown 0xffff
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  22 LensType 0x1d
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  23 LongFocalLengthOfLensInFocalUnits 0x32
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  24 ShortFocalLengthOfLensInFocalUnits 0x32
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  25 FocalUnitsPerMM 0x1
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  26 Unknown 0x38
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  27 Unknown 0x120
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  28 FlashActivity 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  29 FlashDetails 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  30 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  31 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  32 FocusMode 0xffff
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  33 AESetting 0xffff
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  34 ImageStabilization 0xffff
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  35 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  36 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  37 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  38 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  39 SpotMeteringMode 0xffff
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  40 Unknown 0xffff
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  41 ManualFlashOutput 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  42 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  43 Unknown 0x7fff
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  44 Unknown 0xffff
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  45 Unknown 0xffff
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  46 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  47 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  48 Unknown 0x4
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:460] Canon MakerNote Tag 0x0002
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  1 FocalType 0x32
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  2 FocalLength 0xb16
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  3 Unknown 0x5a24
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:460] Canon MakerNote Tag 0x0004
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  1 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  2 Unknown 0xa0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  3 Unknown 0x120
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  4 Unknown 0x34
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  5 Unknown 0x160
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  6 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  7 WhiteBalance 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  8 SlowShutter 0x3
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  9 SequenceNumber 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  10 Unknown 0x8
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  11 Unknown 0x8
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  12 Unknown 0x8d
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  13 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  14 AFPointUsed 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  15 FlashBias 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  16 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  17 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  18 Unknown 0x1
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  19 SubjectDistance 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  20 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  21 Unknown 0x38
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  22 Unknown 0x160
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  23 Unknown 0x9e
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  24 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  25 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  26 Unknown 0xf8
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  27 Unknown 0xffff
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  28 Unknown 0xffff
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  29 Unknown 0xffff
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  30 Unknown 0xffff
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  31 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  32 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  33 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:460] Canon MakerNote Tag 0x0026
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  1 Unknown 0x2
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  2 AFAreaMode 0x1f
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  3 NumAFPoints 0x13
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  4 ValidAFPoints 0x1560
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  5 CanonImageWidth 0xe40
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  6 Unknown 0x1560
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  7 Unknown 0xe40
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  8 Unknown 0xe5
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  9 Unknown 0xe5
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  10 Unknown 0xe5
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  11 Unknown 0xe5
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  12 Unknown 0xe5
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  13 Unknown 0xe5
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  14 Unknown 0xe5
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  15 Unknown 0xe5
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  16 Unknown 0xe5
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  17 Unknown 0xe5
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  18 Unknown 0xe5
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  19 Unknown 0xe5
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  20 Unknown 0xe5
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  21 Unknown 0xe5
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  22 Unknown 0xe5
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  23 Unknown 0xe5
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  24 Unknown 0xe5
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  25 Unknown 0xe5
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  26 Unknown 0xe5
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  27 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  28 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  29 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  30 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  31 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  32 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  33 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  34 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  35 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  36 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  37 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  38 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  39 Unknown 0x115
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  40 Unknown 0x115
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  41 Unknown 0x115
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  42 Unknown 0x115
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  43 Unknown 0x115
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  44 Unknown 0x115
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  45 Unknown 0x115
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  46 Unknown 0x115
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  47 Unknown 0x115
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  48 Unknown 0x115
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  49 Unknown 0x115
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  50 Unknown 0x115
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  51 Unknown 0x115
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  52 Unknown 0x115
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  53 Unknown 0x115
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  54 Unknown 0x115
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  55 Unknown 0x115
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  56 Unknown 0x115
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  57 Unknown 0x115
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  58 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  59 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  60 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  61 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  62 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  63 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  64 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  65 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  66 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  67 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  68 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  69 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  70 Unknown 0xfa8d
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  71 Unknown 0xfc7f
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  72 Unknown 0xfc7f
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  73 Unknown 0xfc7f
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  74 Unknown 0xfe71
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  75 Unknown 0xfe71
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  76 Unknown 0xfe71
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  77 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  78 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  79 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  80 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  81 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  82 Unknown 0x18f
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  83 Unknown 0x18f
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  84 Unknown 0x18f
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  85 Unknown 0x381
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  86 Unknown 0x381
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  87 Unknown 0x381
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  88 Unknown 0x573
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  89 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  90 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  91 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  92 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  93 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  94 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  95 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  96 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  97 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  98 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  99 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  100 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  101 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  102 Unknown 0x191
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  103 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  104 Unknown 0xfe6f
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  105 Unknown 0x191
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  106 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  107 Unknown 0xfe6f
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  108 Unknown 0x2f3
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  109 Unknown 0x191
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  110 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  111 Unknown 0xfe6f
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  112 Unknown 0xfd0d
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  113 Unknown 0x191
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  114 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  115 Unknown 0xfe6f
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  116 Unknown 0x191
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  117 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  118 Unknown 0xfe6f
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  119 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  120 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  121 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  122 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  123 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  124 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  125 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  126 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  127 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  128 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  129 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  130 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  131 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  132 Unknown 0x200
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  133 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  134 Unknown 0x200
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  135 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  136 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  137 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  138 Unknown 0xffff
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:460] Canon MakerNote Tag 0x0093
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  1 FileNumber 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  2 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  3 BracketMode 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  4 BracketValue 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  5 BracketShotNumber 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  6 RawJpgQuality 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  7 RawJpgSize 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  8 LongExposureNoiseReduction2 0xffff
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  9 WBBracketMode 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  10 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  11 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  12 WBBracketValueAB 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  13 WBBracketValueGM 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  14 FilterEffect 0xffff
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  15 ToningEffect 0xffff
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  16 MacroMagnification 0xa3
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  17 Unknown 0xffff
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  18 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  19 LiveViewShooting 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  20 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  21 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  22 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  23 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  24 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  25 FlashExposureLock 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  26 Unknown 0xffff
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  27 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  28 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  29 Unknown 0x0
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  30 Unknown 0xffff
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:488]  31 Unknown 0xffff
+[DEBUG] 2018-03-29 23:50:11 [classes.py_Line:465] Canon CameraInfo
+[DEBUG] 2018-03-29 23:50:11 [fs_worker.py_Line:53] ('born date of "/media/second/VirtualEnvs/fotoarchive/FotoArchive/ata/../import/IMG_1525.JPG" is "2018-03-17 13:30:22"',)
+[DEBUG] 2018-03-29 23:50:42 [fs_worker.py_Line:53] ('b9fe277794b1e98aaee6eb24b305373b', '/media/second/VirtualEnvs/fotoarchive/FotoArchive/ata/../import/IMG_1525.CR2')
+[DEBUG] 2018-03-29 23:50:53 [fs_worker.py_Line:53] ('born date of "/media/second/VirtualEnvs/fotoarchive/FotoArchive/ata/../import/IMG_1525.CR2" is "2018-03-17 16:30:24"',)
+[DEBUG] 2018-03-29 23:52:19 [fs_worker.py_Line:53] ('365c4411ccfde20bb5c30d407e2dd35f', '/media/second/VirtualEnvs/fotoarchive/FotoArchive/ata/../import/video2.AVI')
+[DEBUG] 2018-03-29 23:52:20 [fs_worker.py_Line:53] ('born date of "/media/second/VirtualEnvs/fotoarchive/FotoArchive/ata/../import/video2.AVI" is "1980-01-01 03:00:00"',)
+[DEBUG] 2018-03-29 23:52:29 [fs_worker.py_Line:53] ('85ee7fd3712a8f02bbf9e6dafaa554e3', '/media/second/VirtualEnvs/fotoarchive/FotoArchive/ata/../import/video.mp4')
+[DEBUG] 2018-03-29 23:52:29 [fs_worker.py_Line:53] ('born date of "/media/second/VirtualEnvs/fotoarchive/FotoArchive/ata/../import/video.mp4" is "2018-03-28 21:10:26.764676"',)
+[DEBUG] 2018-03-29 23:52:29 [fs_worker.py_Line:53] ('ended works',)
+[DEBUG] 2018-03-29 23:52:29 [fs_worker.py_Line:53] ('config4', None)

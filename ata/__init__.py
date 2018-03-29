@@ -198,7 +198,7 @@ class ToArchiveMover(TaskExecuterTemplate):
 
     def execute(self):
         """ перенос """
-        if not Flags().got_work or self.__done:
+        if not Flags().got_work:
             return
         # проверить папки по типам
         import_path = Path.join(Path.dirname(__file__),
@@ -213,20 +213,21 @@ class ToArchiveMover(TaskExecuterTemplate):
 
         for file, f_type in files.items():
             FSWorker.log(FSWorker.get_hash_md5(file), file)
-            if True: # хэш не записан
+            if True: # проверить хэш
                 date = FSWorker.get_born_date(file)
                 FSWorker.log('born date of "{}" is "{}"'.format(file, date))
+                # создать/проверить папку
                 folder = self.__date_to_folder(date, f_type)
                 if folder is None:
                     continue
                 _, f = Path.split(file)
                 src = FSWorker.get_filename(Path.join(folder, f))
-                FSWorker.copy_file(file, src)
+                if FSWorker.copy_file(file, src) and FSWorker.check_create(src):
+                    # переместить и записать хэш
+                    if FSWorker.get_hash_md5(file) == FSWorker.get_hash_md5(src):
+                        # запись хэша
+                        FSWorker.remove(file)
 
-
-            # проверить хэш
-            # создать/проверить папку
-            # переместить и записать хэш
 
         self.make_done()
 

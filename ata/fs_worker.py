@@ -89,7 +89,7 @@ class FSWorker(metaclass=ABCMeta):
         return date
 
     @classmethod
-    def __date_from_raw(cls):
+    def __date_from_raw(cls, path):
         pass
 
     @classmethod
@@ -184,14 +184,26 @@ class FSWorker(metaclass=ABCMeta):
         return False
 
     @classmethod
+    def remove(cls, src):
+        try:
+            os.remove(src)
+        except OSError as err:
+            cls.log("Error: {} - {}".format(err.filename, err.strerror))
+
+    @classmethod
     def get_filename(cls, path):
+        tmp_path = path
         counter = 1
-        if os.path.exists(path):
-            while True:
+        while True:
+            if os.path.exists(path):
 
-                p, ext = os.path.splitext(path)
-                new_file = '{}{}{}'.format(p, counter, ext)
 
+                p, ext = os.path.splitext(tmp_path)
+                path = '{}{}{}'.format(p, counter, ext)
+                counter += 1
+            else:
+                break
+        return path
 
 
 
