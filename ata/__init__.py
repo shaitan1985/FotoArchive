@@ -198,6 +198,8 @@ class ToArchiveMover(TaskExecuterTemplate):
 
     def execute(self):
         """ перенос """
+        if not Flags().got_work or self.__done:
+            return
         # проверить папки по типам
         import_path = Path.join(Path.dirname(__file__),
                                                 '..',
@@ -218,7 +220,8 @@ class ToArchiveMover(TaskExecuterTemplate):
                 if folder is None:
                     continue
                 _, f = Path.split(file)
-                FSWorker.copy_file(file, Path.join(folder, f))
+                src = FSWorker.get_filename(Path.join(folder, f))
+                FSWorker.copy_file(file, src)
 
 
             # проверить хэш

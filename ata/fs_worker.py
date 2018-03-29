@@ -183,6 +183,16 @@ class FSWorker(metaclass=ABCMeta):
             cls.log('Возникла ошибка при копировании "{}"', src, err, )
         return False
 
+    @classmethod
+    def get_filename(cls, path):
+        counter = 1
+        if os.path.exists(path):
+            while True:
+
+                p, ext = os.path.splitext(path)
+                new_file = '{}{}{}'.format(p, counter, ext)
+
+
 
 
 
