@@ -15,9 +15,10 @@ from abc import ABCMeta, abstractmethod
 import json
 import os.path as Path
 from collections import OrderedDict
-
+from telethon import TelegramClient
 
 from ata.fs_worker import FSWorker
+from ata.db_keeper import DBWorker
 
 def singleton(cls):
     instances = {}
@@ -110,7 +111,7 @@ class Initializer(object):
         Config()
         self.__moduls = OrderedDict()
         self.__fill_moduls()
-        self.__check_import_path()
+        self.__check_start_paths()
 
     def __iter__(self):
         return iter(sorted(self.__moduls.items()))
@@ -133,7 +134,7 @@ class Initializer(object):
         except AttributeError:
             del self.__moduls[key]
 
-    def __check_import_path(self):
+    def __check_start_paths(self):
         FSWorker.check_create(Config().type_paths.get('import'), False)
 
     def __fill_moduls(self):
@@ -168,6 +169,28 @@ class TaskExecuterTemplate(metaclass=ABCMeta):
 
     def make_done(self):
         self.__done = True
+
+
+class TelegaUpdateChecker(TaskExecuterTemplate):
+
+    def __init__(self):
+        super().__init__()
+
+    def execute(self):
+        api_id = 263724
+        api_hash = "3a8ae22a8e6981038a370c7149d51fc2"
+
+
+        client = TelegramClient('session_name', api_id, api_hash)
+        client.connect()
+        username = 'shaitan1985'
+        for message in client.get_messages(username, limit=10):
+            if not DBWorker.get_telega_id_date(message.id):
+
+                file = client.download_media(message, Config().type_paths.get('import'))
+                FSWorker.log('From telega was downloaded: "{}"'.format(file))
+                DBWorker.write_telega_id(message.id)
+
 
 
 class FolderUpdateChecker(TaskExecuterTemplate):
@@ -206,14 +229,20 @@ class ToArchiveMover(TaskExecuterTemplate):
                                                  Config().type_paths.get('import'))
 
         self.__check_folders(import_path)
+        types = FSWorker.get_all_types(import_path)
         # получить список файлов
         files = FSWorker.get_all_files(import_path)
-        FSWorker.log('123', files, type(files))
         # пройти по файлам
 
         for file, f_type in files.items():
-            FSWorker.log(FSWorker.get_hash_md5(file), file)
-            if True: # проверить хэш
+            if f_type not in types:
+                continue
+            if not FSWorker.check_free_space(file):
+                FSWorker.log('For "{}" not enaugh space'.format(file))
+                raise Exception
+            f_hash = FSWorker.get_hash_md5(file)
+            FSWorker.log(f_hash, file)
+            if not DBWorker.check_hash(f_hash, file): # проверить хэш
                 date = FSWorker.get_born_date(file)
                 FSWorker.log('born date of "{}" is "{}"'.format(file, date))
                 # создать/проверить папку
@@ -224,9 +253,14 @@ class ToArchiveMover(TaskExecuterTemplate):
                 src = FSWorker.get_filename(Path.join(folder, f))
                 if FSWorker.copy_file(file, src) and FSWorker.check_create(src):
                     # переместить и записать хэш
-                    if FSWorker.get_hash_md5(file) == FSWorker.get_hash_md5(src):
+                    if f_hash == FSWorker.get_hash_md5(src):
                         # запись хэша
+                        DBWorker.write_hash(f_hash, src)
                         FSWorker.remove(file)
+            else:
+                FSWorker.remove(file)
+
+        FSWorker.remove_empty(import_path)
 
 
         self.make_done()
@@ -272,9 +306,6 @@ class ArtObject(metaclass=ABCMeta):
 
 
 
-
-
-
 def main():
     """
         Запуск Наблюдателя(синглтон):
@@ -300,13 +331,9 @@ def main():
     Flags()
     FSWorker.log('config3', config.__dict__)
 
-
-
-
-
     main_init = Initializer()
     """ здесь можно добавлять обработчики"""
-    # main_init.q20 = FolderUpdateChecker()
+    main_init.q9 = TelegaUpdateChecker()
     FSWorker.log('Initializer2', main_init.__dict__)
 
     for item in main_init:

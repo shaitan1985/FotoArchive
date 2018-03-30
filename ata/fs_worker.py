@@ -29,11 +29,20 @@ class FSWorker(metaclass=ABCMeta):
     @classmethod
     def check_free_space(cls, path):
         #проверка свободного места
-        st = os.statvfs(path)
+        folder, _ = os.path.split(path)
+        st = os.statvfs(folder)
         du = st.f_bsize * st.f_bavail
+        file_du = cls.get_filesize(path)
 
-        du = st.f_bsize * st.f_bavail / 1024 / 1024 # кб в мб
-        cls.log(du)
+        # du = st.f_bsize * st.f_bavail / 1024 / 1024 # кб в мб
+        return du > file_du
+
+    @classmethod
+    def get_filesize(cls, path):
+        st = os.stat(path)
+        du = st.st_size
+        cls.log('the size of "{}" is {} b'.format(path, du))
+        return du
 
 
     @classmethod
@@ -72,6 +81,12 @@ class FSWorker(metaclass=ABCMeta):
         if len(info.type):
             return info.type[0]
         return None
+
+    @classmethod
+    def get_ext(cls, path):
+        _, ext = os.path.splitext(path)
+        ext = ext.lstrip('.')
+        return ext
 
     @classmethod
     def get_born_date(cls, path):
@@ -199,12 +214,21 @@ class FSWorker(metaclass=ABCMeta):
 
 
                 p, ext = os.path.splitext(tmp_path)
-                path = '{}{}{}'.format(p, counter, ext)
+                path = '{}{}_{}'.format(p, counter, ext)
                 counter += 1
             else:
                 break
         return path
 
+    @classmethod
+    def remove_empty(cls, path):
+        for d in os.listdir(path):
+            a = os.path.join(path, d)
+            if os.path.isdir(a):
+                cls.remove_empty(a)
+                if not os.listdir(a):
+                    os.rmdir(a)
+                    cls.log('Removed folder: "{}"'.format(a))
 
 
 

@@ -1,7 +1,7 @@
 {
+    "import": "import",
     "preview": "storage/photo/preview",
     "raw-image": "storage/photo/raw-image",
-    "raster-image": "storage/photo/raster-image",
     "video": "storage/video",
-    "import": "import"
+    "raster-image": "storage/photo/raster-image"
 }

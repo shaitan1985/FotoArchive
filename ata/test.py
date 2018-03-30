@@ -1,28 +1,44 @@
-from hachoir.parser import createParser
-from hachoir.metadata import extractMetadata
-from sys import argv, stderr, exit
-import os, time
 
-filename = os.path.join(os.path.dirname(__file__), "video.mp4")
-parser = createParser(filename)
-if not parser:
-    print("Unable to parse file", file=stderr)
-    exit(1)
+from telethon import TelegramClient
 
-with parser:
-    try:
-        metadata = extractMetadata(parser)
-    except Exception as err:
-        print("Metadata extraction error: %s" % err)
-        metadata = None
-if not metadata:
-    print("Unable to extract metadata")
-    exit(1)
-for line in metadata.exportPlaintext():
-    print(line)
+api_id = 263724                  # API ID (получается при регистрации приложения на my.telegram.org)
+api_hash = "3a8ae22a8e6981038a370c7149d51fc2"              # API Hash (оттуда же)
+phone_number = "+79523870268"    # Номер телефона аккаунта, с которого будет выполняться код
 
-stat = os.stat(filename)
-try:
-    print(time.ctime(stat.st_birthtime))
-except AttributeError:
-    print(time.ctime(stat.st_mtime))
+
+# Необходимо предварительно авторизоваться, чтобы был создан файл second_account,
+# содержащий данные об аутентификации клиента.
+client = TelegramClient('session_name', api_id, api_hash)
+client.connect()
+
+# print(client.get_me().stringify())
+
+username = 'shaitan1985' # канал @telegram
+
+
+for message in client.get_messages(username, limit=10):
+    print(message.id)
+    # client.download_media(message)
+    break
+
+
+
+# import hashlib
+# file = '001.jpg'
+# with open(file, 'rb') as f:
+#     m = hashlib.md5()
+#     while True:
+#         data = f.read(8192)  # размер блока чтения 8 мб
+#         if not data:
+#             break
+#         m.update(data)
+#     print(m.hexdigest())
+# file = '002.jpg'
+# with open(file, 'rb') as f:
+#     m = hashlib.md5()
+#     while True:
+#         data = f.read(8192)  # размер блока чтения 8 мб
+#         if not data:
+#             break
+#         m.update(data)
+#     print(m.hexdigest())
