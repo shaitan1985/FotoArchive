@@ -1,33 +1,37 @@
-[DEBUG] 2018-03-30 17:07:34 [fs_worker.py_Line:62] ('config3', None)
-[DEBUG] 2018-03-30 17:07:34 [fs_worker.py_Line:62] ('FolderUpdateChecker started',)
-[DEBUG] 2018-03-30 17:07:34 [fs_worker.py_Line:62] ('import',)
-[DEBUG] 2018-03-30 17:07:34 [fs_worker.py_Line:62] ('ToArchiveMover started',)
-[DEBUG] 2018-03-30 17:07:34 [fs_worker.py_Line:62] (FileExistsError(17, 'File exists'),)
-[DEBUG] 2018-03-30 17:07:34 [fs_worker.py_Line:62] ('Initializer2', None)
-[DEBUG] 2018-03-30 17:07:34 [fs_worker.py_Line:62] (('q20', <ata.FolderUpdateChecker object at 0x7fbc506656a0>),)
-[DEBUG] 2018-03-30 17:07:34 [fs_worker.py_Line:62] (('q30', <ata.ToArchiveMover object at 0x7fbc50665710>),)
-[DEBUG] 2018-03-30 17:07:34 [fs_worker.py_Line:62] (('q9', <ata.TelegaUpdateChecker object at 0x7fbc50665748>),)
-[DEBUG] 2018-03-30 17:07:34 [fs_worker.py_Line:62] ('start_works',)
-[DEBUG] 2018-03-30 17:07:34 [fs_worker.py_Line:62] ('Now working:', 'q20', <ata.FolderUpdateChecker object at 0x7fbc506656a0>)
-[DEBUG] 2018-03-30 17:07:34 [fs_worker.py_Line:62] (set(),)
-[DEBUG] 2018-03-30 17:07:34 [fs_worker.py_Line:62] ('nu kakto tak',)
-[DEBUG] 2018-03-30 17:07:34 [fs_worker.py_Line:62] ('Now working:', 'q30', <ata.ToArchiveMover object at 0x7fbc50665710>)
-[DEBUG] 2018-03-30 17:07:34 [fs_worker.py_Line:62] ('Now working:', 'q9', <ata.TelegaUpdateChecker object at 0x7fbc50665748>)
-[INFO] 2018-03-30 17:07:34 [telegram_bare_client.py_Line:199] Connecting to 149.154.167.51:443...
-[INFO] 2018-03-30 17:07:34 [telegram_bare_client.py_Line:205] Connection success!
-[DEBUG] 2018-03-30 17:07:34 [telegram_bare_client.py_Line:445] Invoking GetStateRequest
-[INFO] 2018-03-30 17:07:34 [telegram_bare_client.py_Line:487] Initializing a new connection while invoking
-[DEBUG] 2018-03-30 17:07:34 [mtproto_sender.py_Line:94] Sending requests with IDs: InvokeWithLayerRequest: 6538739189761941484
-[DEBUG] 2018-03-30 17:07:34 [mtproto_sender.py_Line:221] Processing BadServerSalt result
-[DEBUG] 2018-03-30 17:07:34 [mtproto_sender.py_Line:94] Sending requests with IDs: InvokeWithLayerRequest: 6538739189940102148
-[DEBUG] 2018-03-30 17:07:34 [mtproto_sender.py_Line:206] Processing container result
-[DEBUG] 2018-03-30 17:07:34 [mtproto_sender.py_Line:221] Processing NewSessionCreated result
-[DEBUG] 2018-03-30 17:07:34 [mtproto_sender.py_Line:221] Processing MsgsAck result
-[DEBUG] 2018-03-30 17:07:34 [mtproto_sender.py_Line:202] Processing Remote Procedure Call result
-[DEBUG] 2018-03-30 17:07:34 [mtproto_sender.py_Line:480] Received response for request with ID 6538739189940102148
-[DEBUG] 2018-03-30 17:07:34 [mtproto_sender.py_Line:502] Confirmed InvokeWithLayerRequest through error The key is not registered in the system
-[DEBUG] 2018-03-30 17:09:13 [telegram_bare_client.py_Line:445] Invoking ResolveUsernameRequest
-[DEBUG] 2018-03-30 17:09:13 [mtproto_sender.py_Line:94] Sending requests with IDs: ResolveUsernameRequest: 6538739615480320608
-[DEBUG] 2018-03-30 17:09:13 [mtproto_sender.py_Line:202] Processing Remote Procedure Call result
-[DEBUG] 2018-03-30 17:09:13 [mtproto_sender.py_Line:480] Received response for request with ID 6538739615480320608
-[DEBUG] 2018-03-30 17:09:13 [mtproto_sender.py_Line:502] Confirmed ResolveUsernameRequest through error The key is not registered in the system
+[DEBUG] 2018-03-30 18:04:16 [fs_worker.py_Line:62] ('config3', None)
+[DEBUG] 2018-03-30 18:04:16 [fs_worker.py_Line:62] ('FolderUpdateChecker started',)
+[DEBUG] 2018-03-30 18:04:16 [fs_worker.py_Line:62] ('import',)
+[DEBUG] 2018-03-30 18:04:16 [fs_worker.py_Line:62] ('ToArchiveMover started',)
+[DEBUG] 2018-03-30 18:04:16 [fs_worker.py_Line:62] (FileExistsError(17, 'File exists'),)
+[DEBUG] 2018-03-30 18:04:16 [fs_worker.py_Line:62] ('Initializer2', None)
+[DEBUG] 2018-03-30 18:04:16 [fs_worker.py_Line:62] (('q20', <ata.FolderUpdateChecker object at 0x7fc46a13d898>),)
+[DEBUG] 2018-03-30 18:04:16 [fs_worker.py_Line:62] (('q30', <ata.ToArchiveMover object at 0x7fc46a13d8d0>),)
+[DEBUG] 2018-03-30 18:04:16 [fs_worker.py_Line:62] (('q9', <ata.TelegaUpdateChecker object at 0x7fc46a13d908>),)
+[DEBUG] 2018-03-30 18:04:16 [fs_worker.py_Line:62] ('start_works',)
+[DEBUG] 2018-03-30 18:04:16 [fs_worker.py_Line:62] ('Now working:', 'q20', <ata.FolderUpdateChecker object at 0x7fc46a13d898>)
+[DEBUG] 2018-03-30 18:04:16 [fs_worker.py_Line:62] (set(),)
+[DEBUG] 2018-03-30 18:04:16 [fs_worker.py_Line:62] ('nu kakto tak',)
+[DEBUG] 2018-03-30 18:04:16 [fs_worker.py_Line:62] ('Now working:', 'q30', <ata.ToArchiveMover object at 0x7fc46a13d8d0>)
+[DEBUG] 2018-03-30 18:04:16 [fs_worker.py_Line:62] ('Now working:', 'q9', <ata.TelegaUpdateChecker object at 0x7fc46a13d908>)
+[INFO] 2018-03-30 18:04:16 [telegram_bare_client.py_Line:199] Connecting to 149.154.167.51:443...
+[INFO] 2018-03-30 18:04:16 [telegram_bare_client.py_Line:205] Connection success!
+[DEBUG] 2018-03-30 18:04:16 [telegram_bare_client.py_Line:445] Invoking GetStateRequest
+[INFO] 2018-03-30 18:04:16 [telegram_bare_client.py_Line:481] Need to generate new auth key before invoking
+[INFO] 2018-03-30 18:04:17 [telegram_bare_client.py_Line:487] Initializing a new connection while invoking
+[DEBUG] 2018-03-30 18:04:17 [mtproto_sender.py_Line:94] Sending requests with IDs: InvokeWithLayerRequest: 6538753805107741828
+[DEBUG] 2018-03-30 18:04:17 [mtproto_sender.py_Line:221] Processing BadServerSalt result
+[DEBUG] 2018-03-30 18:04:17 [mtproto_sender.py_Line:94] Sending requests with IDs: InvokeWithLayerRequest: 6538753805541253560
+[DEBUG] 2018-03-30 18:04:17 [mtproto_sender.py_Line:206] Processing container result
+[DEBUG] 2018-03-30 18:04:17 [mtproto_sender.py_Line:221] Processing NewSessionCreated result
+[DEBUG] 2018-03-30 18:04:17 [mtproto_sender.py_Line:221] Processing MsgsAck result
+[DEBUG] 2018-03-30 18:04:17 [mtproto_sender.py_Line:202] Processing Remote Procedure Call result
+[DEBUG] 2018-03-30 18:04:17 [mtproto_sender.py_Line:480] Received response for request with ID 6538753805541253560
+[DEBUG] 2018-03-30 18:04:17 [mtproto_sender.py_Line:502] Confirmed InvokeWithLayerRequest through error The key is not registered in the system
+[DEBUG] 2018-03-30 18:04:17 [telegram_bare_client.py_Line:445] Invoking ResolveUsernameRequest
+[DEBUG] 2018-03-30 18:04:17 [mtproto_sender.py_Line:94] Sending requests with IDs: ResolveUsernameRequest: 6538753805759760372
+[DEBUG] 2018-03-30 18:04:17 [mtproto_sender.py_Line:202] Processing Remote Procedure Call result
+[DEBUG] 2018-03-30 18:04:17 [mtproto_sender.py_Line:480] Received response for request with ID 6538753805759760372
+[DEBUG] 2018-03-30 18:04:17 [mtproto_sender.py_Line:502] Confirmed ResolveUsernameRequest through error The key is not registered in the system
+[DEBUG] 2018-03-30 18:04:17 [fs_worker.py_Line:62] ('Fucken bitch dead again. BIIIIITCH',)
+[DEBUG] 2018-03-30 18:04:17 [fs_worker.py_Line:62] ('ended works',)
+[DEBUG] 2018-03-30 18:04:17 [fs_worker.py_Line:62] ('config4', None)

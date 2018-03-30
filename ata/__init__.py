@@ -180,16 +180,19 @@ class TelegaUpdateChecker(TaskExecuterTemplate):
         api_id = 263724
         api_hash = "3a8ae22a8e6981038a370c7149d51fc2"
 
-
-        client = TelegramClient('session_name', api_id, api_hash)
+        sn_path = Path.join(Path.dirname(__file__), 'session_name')
+        client = TelegramClient(sn_path, api_id, api_hash)
         client.connect()
         username = 'shaitan1985'
-        for message in client.get_messages(username, limit=10):
-            if not DBWorker.get_telega_id_date(message.id):
+        try:
+            for message in client.get_messages(username, limit=1):
+                if not DBWorker.get_telega_id_date(message.id):
 
-                file = client.download_media(message, Config().type_paths.get('import'))
-                FSWorker.log('From telega was downloaded: "{}"'.format(file))
-                DBWorker.write_telega_id(message.id)
+                    file = client.download_media(message, Config().type_paths.get('import'))
+                    FSWorker.log('From telega was downloaded: "{}"'.format(file))
+                    DBWorker.write_telega_id(message.id)
+        except Exception as err:
+            FSWorker.log("Fucken bitch dead again. BIIIIITCH")
 
 
 
